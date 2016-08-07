@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,900' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<title>TRIVIAS</title>
+</head>
+<body>
+	<div class="container">
+	<nav>
+		<a class="left-menu" href="/">TRIVIA.com</a>
+		<ul class="right-menu">
+			<li class="right-item"><a href="/most_voted">Mas Votados</a></li>
+			<li class="right-item"><a href="/create">Crear Trivia</a></li>
+		</ul>
+	</nav>
+	<header class="main-banner">
+		<h1 class="text-center">Trivias.com</h1>
+		<h2 class="text-center">Tu web de Trivias</h2>
+	</header>
+	{% block content %}{% endblock %}
+	<hr>
+	<footer>
+		<nav>
+			<a class="left-menu" href="/">TRIVIA.com</a>
+			<ul class="right-menu">
+				<li class="right-item"><a href="/most_voted">Mas Votados</a></li>
+				<li class="right-item"><a href="/create">Crear Trivia</a></li>
+			</ul>
+		</nav>
+	</footer>
+</div>
+</body>
+</html>

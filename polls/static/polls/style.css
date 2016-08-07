@@ -1,0 +1,78 @@
+.left-menu{
+	float: left;
+	margin: 5px;
+}
+
+.right-menu{
+	float: right;
+}
+
+
+.right-item{
+	display: inline-block;
+	text-decoration: none;
+	margin: 5px;
+}
+
+nav, footer{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	overflow: auto;
+}
+
+.main-banner{
+	width: 100%;
+	height: 350px;
+	padding-top: 150px;
+	color: white;
+	background: grey;
+	background: url('http://placehold.it/350x150');
+	background-size: cover;
+}
+
+.principal{
+	width: 100%;
+	height: 500px;
+}
+
+
+.question-list{
+	list-style-type: none;
+	font-family: 'Merriweather', serif;
+	font-weight: 900;
+	font-size: 20px;
+
+}
+
+footer{
+	width: 100%;
+	height: 100px;
+	background: grey;
+	color: white;
+	text-decoration: none;
+
+}
+
+h1,h2,h3{
+	font-family: 'Merriweather', serif;
+}
+
+h1{
+	font-weight: 900;
+
+}
+
+h2{
+	font-weight: 400;
+}
+
+h3{
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+
+.detailradiomargin{
+	margin-left: 30px;
+	margin-bottom: 30px;
+}

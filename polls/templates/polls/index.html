@@ -1,0 +1,71 @@
+{% extends "polls/base.html" %}
+
+
+{% block content %}
+
+	<div class="principal">
+		<hr>
+		<h3 class="text-center">Estan son las ultima Trivias</h3>
+		{% if latest_question_list %}
+		    <ul class="question-list">
+		    {% for question in latest_question_list %}
+		    	<li><a  href="#" id="myLink" value='{{ question.id }}' onclick="doSomething('{{ question.id }}');return false;">{{ question.question_text }}</a></li>
+		        
+		    {% endfor %}
+		    </ul>
+		{% else %}
+		    <p>No polls are available.</p>
+		{% endif %}
+	</div>
+
+	<script type="text/javascript">
+
+	function doSomething(elem){
+		console.log(elem)
+	console.log('entra aca');
+	$.ajax({
+		data: {'id': elem},
+		url: '/modal_choice',
+		type: 'get',
+		success: function(data){
+			var voteurl = '<a href="'+ '/' + elem + '/vote' +'">Votar</a>';
+			$('#votar').html(voteurl);
+			console.log(data);
+			var html = '<ul>';
+			for (var i = 0; i<data.length; i++) {
+				console.log(data[i].fields.choice_text);
+				html += '<li>'+ data[i].fields.choice_text + '       ' +data[i].fields.votes +'</li>';
+			}
+			html += '</ul>';
+			$('#datos').html(html);
+			$("#myModal").modal();
+		}
+	});
+}
+</script>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Detalle/Resultados de la Trivia</h4>
+        </div>
+        <div class="modal-body">
+        	<div id="datos"></div>
+	        <div id="votar">
+	        	<a href="#">Votar</a>
+	        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+{% endblock %}

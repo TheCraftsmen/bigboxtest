@@ -1,0 +1,22 @@
+{% extends "polls/base.html" %}
+
+{% block content %}
+<hr>
+<h3 class="text-center">Creador de Preguntas</h3>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'polls:create'%}" method="post">
+{% csrf_token %}
+	<div class="form-group">
+	    <input class="form-control" type="text" placeholder="ingrese un titulo" name='title' /><br><br>
+	    <input class="form-control" type="text" placeholder="choice 1" name='ch1' /><br>
+	    <input class="form-control" type="text" placeholder="choice 2" name='ch2' /><br>
+	    <input class="form-control" type="text" placeholder="choice 3" name='ch3' /><br>
+	    <input class="form-control" type="text" placeholder="choice 4" name='ch4' /><br>
+	</div>
+<input class="btn btn-default" type="submit" value="Crear" />
+</form>
+
+
+{% endblock %}
