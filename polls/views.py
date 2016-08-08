@@ -16,8 +16,6 @@ def most_voted(request):
     from django.db.models import Sum
     mostVoted = Question.objects.annotate(mostvoted=Sum('choice__votes')) \
                 .order_by('-mostvoted')[:5]
-    print mostVoted.query
-    # latest_question_list = Question.objects.order_by('-pub_date')[:5]
     context = {'most_voted_list': mostVoted}
     return render(request, 'polls/most_voted.html', context)
 
@@ -30,8 +28,6 @@ def modal_choice(request):
     from django.core import serializers
     question_id = request.GET['id']
     question = get_object_or_404(Question, pk=question_id)
-    for choice in question.choice_set.all():
-        print choice.choice_text
     predata = question.choice_set.all()
     data = serializers.serialize('json', predata,
                     fields=('choice_text', 'votes'))
