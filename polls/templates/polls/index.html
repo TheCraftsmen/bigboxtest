@@ -21,8 +21,6 @@
 	<script type="text/javascript">
 
 	function doSomething(elem){
-		console.log(elem)
-	console.log('entra aca');
 	$.ajax({
 		data: {'id': elem},
 		url: '/modal_choice',
@@ -30,10 +28,8 @@
 		success: function(data){
 			var voteurl = '<a href="'+ '/' + elem + '/vote' +'">Votar</a>';
 			$('#votar').html(voteurl);
-			console.log(data);
 			var html = '<ul>';
 			for (var i = 0; i<data.length; i++) {
-				console.log(data[i].fields.choice_text);
 				html += '<li>'+ data[i].fields.choice_text + '       ' +data[i].fields.votes +'</li>';
 			}
 			html += '</ul>';
