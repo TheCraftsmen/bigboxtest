@@ -26,7 +26,8 @@ nav, footer{
 	padding-top: 150px;
 	color: white;
 	background: grey;
-	background: url('http://placehold.it/350x150');
+	background: url('../img/banner.jpg');
+	/*background: url('http://placehold.it/350x150');*/
 	background-size: cover;
 }
 
@@ -39,18 +40,26 @@ nav, footer{
 .question-list{
 	list-style-type: none;
 	font-family: 'Merriweather', serif;
+	text-transform: uppercase;
 	font-weight: 900;
 	font-size: 20px;
 
+}
+
+.brown{
+	color: #7b5d35;
 }
 
 footer{
 	width: 100%;
 	height: 100px;
 	background: grey;
-	color: white;
 	text-decoration: none;
 
+}
+
+.white{
+	color: white;
 }
 
 h1,h2,h3{
@@ -67,8 +76,12 @@ h2{
 }
 
 h3{
+	font-weight: 900;
 	margin-top: 30px;
 	margin-bottom: 40px;
+	text-transform: uppercase;
+    font-size: 33px;
+}
 }
 
 

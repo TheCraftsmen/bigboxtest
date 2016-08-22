@@ -11,7 +11,7 @@
 	{% if most_voted_list %}
 	    <ul class="question-list">
 	    {% for question in most_voted_list %}
-	        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+	        <li><a class="brown" href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
 	    {% endfor %}
 	    </ul>
 	{% else %}
