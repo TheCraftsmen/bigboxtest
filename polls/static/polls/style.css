@@ -1,3 +1,7 @@
+body{
+	background-color: #b6b6b6;
+}
+
 .left-menu{
 	float: left;
 	margin: 5px;
@@ -34,15 +38,20 @@ nav, footer{
 .principal{
 	width: 100%;
 	height: 500px;
+	background: #ccc;
+    -moz-box-shadow: 3px 6px 10px #000000;
+    -webkit-box-shadow: 3px 6px 10px #000000;
+    box-shadow: 3px 6px 10px #000000;
 }
 
 
 .question-list{
 	list-style-type: none;
-	font-family: 'Merriweather', serif;
+	font-family: 'Poiret One', cursive;
 	text-transform: uppercase;
 	font-weight: 900;
 	font-size: 20px;
+	text-align: center;
 
 }
 
@@ -63,23 +72,16 @@ footer{
 }
 
 h1,h2,h3{
-	font-family: 'Merriweather', serif;
+	font-family: 'Lobster', cursive;
 }
 
 h1{
-	font-weight: 900;
-
-}
-
-h2{
-	font-weight: 400;
+	font-size: 60px;
 }
 
 h3{
-	font-weight: 900;
 	margin-top: 30px;
 	margin-bottom: 40px;
-	text-transform: uppercase;
     font-size: 33px;
 }
 }
