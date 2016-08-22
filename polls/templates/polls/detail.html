@@ -8,11 +8,11 @@
 
 	{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-	<form action="{% url 'polls:vote' question.id %}" method="post">
+	<form class="form-position" action="{% url 'polls:vote' question.id %}" method="post">
 	{% csrf_token %}
 	<div class="form-group detailradiomargin">
 	{% for choice in question.choice_set.all %}
-			<div class="radio">
+			<div class="radio form-font">
 			    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
 			    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
 			</div>

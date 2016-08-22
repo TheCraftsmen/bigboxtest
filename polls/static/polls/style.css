@@ -55,6 +55,16 @@ nav, footer{
 
 }
 
+.form-position{
+	margin-left: 37%;
+}
+
+.form-font{
+	font-family: 'Poiret One', cursive;
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
 .brown{
 	color: #7b5d35;
 }
