@@ -9,7 +9,7 @@
 		{% if latest_question_list %}
 		    <ul class="question-list">
 		    {% for question in latest_question_list %}
-		    	<li><a  class="brown" href="#" id="myLink" value='{{ question.id }}' onclick="doSomething('{{ question.id }}');return false;">{{ question.question_text }}</a></li>
+		    	<li><a  class="brown especial" href="#" id="myLink" value='{{ question.id }}' onclick="doSomething('{{ question.id }}');return false;">{{ question.question_text }}</a></li>
 		        
 		    {% endfor %}
 		    </ul>
